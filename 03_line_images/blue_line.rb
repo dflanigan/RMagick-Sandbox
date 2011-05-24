@@ -26,7 +26,7 @@ def add_a_circle(image_field)
   circle.draw(image_field)
 end
 
-the_image = Magick::Image.new(512,256) {
+the_image = Magick::Image.new(1024,512) {
   self.background_color = 'black'
 }
 
