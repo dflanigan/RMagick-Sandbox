@@ -38,6 +38,13 @@ the_image = Magick::Image.new(1680,1050) {
   add_a_circle the_image
 end
 
+title = Magick::Draw.new()
+title.annotate(the_image,0,0,10,10,"500 Circles") {
+  self.pointsize = 32
+  self.fill = "white"
+  self.gravity = Magick::NorthWestGravity
+}
+
 the_image.display
 
 the_image.write "circle_hue_line.jpg"
